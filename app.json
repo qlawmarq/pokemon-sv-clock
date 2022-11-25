@@ -2,7 +2,7 @@
   "expo": {
     "name": "Pokémon SV clock",
     "slug": "pokemon-sv-clock",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "pokemon-sv-clock",
@@ -23,7 +23,7 @@
     ],
     "ios": {
       "bundleIdentifier": "com.pokemon-sv-clock",
-      "buildNumber": "1.0.0",
+      "buildNumber": "1.0.1",
       "supportsTablet": true,
       "infoPlist": {
         "CFBundleAllowMixedLocalizations": true
