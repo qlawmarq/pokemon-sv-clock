@@ -28,6 +28,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../lib/redux/store';
 import { removeClock } from '../../lib/redux/reducers/clockReducer';
 import { BannerAd } from '../../components/BannerAd';
+import { AgreementModal } from './AgreementModal';
+import { Platform } from 'react-native';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Clock'>;
 
@@ -41,6 +43,9 @@ export const ClockScreen: FC<Props> = () => {
 
   const dispatch = useDispatch();
   const { clocks } = useSelector((state: RootState) => state.clock);
+  const { isFirstTimeUser } = useSelector(
+    (state: RootState) => state.appConfig
+  );
 
   const computePokemonDate = useCallback((date: Date) => {
     const pokemonTime = new Date(date);
@@ -166,7 +171,11 @@ export const ClockScreen: FC<Props> = () => {
           </Text>
         </Pressable>
       ) : null}
-      <AddModal />
+      {isFirstTimeUser && Platform.OS !== 'web' ? (
+        <AgreementModal />
+      ) : (
+        <AddModal />
+      )}
       {clocks.length !== 0 ? <BannerAd /> : null}
     </Column>
   );

@@ -12,5 +12,7 @@ const en: langIf = {
   back: 'Back',
   close: 'Close',
   next: 'Next',
+  privacyPolicy: 'Privacy Policy',
+  beforeUsing: 'Before using this app, please agree to the following document.',
 };
 export default en;

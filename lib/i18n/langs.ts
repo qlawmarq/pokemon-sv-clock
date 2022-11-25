@@ -12,4 +12,6 @@ export const langs: langIf = {
   back: 'back',
   close: 'close',
   next: 'next',
+  privacyPolicy: 'privacyPolicy',
+  beforeUsing: 'beforeUsing',
 };

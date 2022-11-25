@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from '@reduxjs/toolkit';
 import clockReducer from './reducers/clockReducer';
+import appConfigReducer from './reducers/appConfigReducer';
 import {
   FLUSH,
   PAUSE,
@@ -19,6 +20,7 @@ const config = {
 };
 
 const reducers = combineReducers({
+  appConfig: appConfigReducer,
   clock: clockReducer,
   // other reducers goes here...
 });

@@ -11,4 +11,6 @@ export interface langIf {
   back: string;
   close: string;
   next: string;
+  privacyPolicy: string;
+  beforeUsing: string;
 }

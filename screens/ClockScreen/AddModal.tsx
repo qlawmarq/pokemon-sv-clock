@@ -52,36 +52,36 @@ export const AddModal: FC = () => {
   return (
     <>
       {clocks.length === 0 ? (
-        <Box
-          px="6"
-          py="3"
-          borderRadius="md"
-          shadow="4"
-          _light={{
-            bg: {
-              linearGradient: {
-                colors: ['primary.900', 'primary.800'],
-                start: [1, 0],
-                end: [0, 1],
-              },
-            },
-            color: 'primary.50',
-          }}
-          _dark={{
-            bg: {
-              linearGradient: {
-                colors: ['primary.200', 'primary.300'],
-                start: [1, 0],
-                end: [0, 1],
-              },
-            },
-            color: 'primary.900',
+        <Pressable
+          onPress={() => {
+            setPage(0);
+            setIsOpen(!isOpen);
           }}
         >
-          <Pressable
-            onPress={() => {
-              setPage(0);
-              setIsOpen(!isOpen);
+          <Box
+            px="6"
+            py="3"
+            borderRadius="md"
+            shadow="4"
+            _light={{
+              bg: {
+                linearGradient: {
+                  colors: ['primary.900', 'primary.800'],
+                  start: [1, 0],
+                  end: [0, 1],
+                },
+              },
+              color: 'primary.50',
+            }}
+            _dark={{
+              bg: {
+                linearGradient: {
+                  colors: ['primary.200', 'primary.300'],
+                  start: [1, 0],
+                  end: [0, 1],
+                },
+              },
+              color: 'primary.900',
             }}
           >
             <Text
@@ -96,8 +96,8 @@ export const AddModal: FC = () => {
             >
               {i18n.t(langs.createFirstClock)}
             </Text>
-          </Pressable>
-        </Box>
+          </Box>
+        </Pressable>
       ) : null}
       <Fab
         renderInPortal={false}
