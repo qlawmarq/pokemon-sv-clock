@@ -159,7 +159,7 @@ export const AddModal: FC = () => {
                     onPress={() => setCurrenTimeframe('day')}
                     width="full"
                   >
-                    {i18n.t(langs.day)}
+                    {i18n.t(langs.day) + ' / ' + i18n.t(langs.evening)}
                   </Button>
                   <Button
                     colorScheme="violet"
@@ -167,7 +167,7 @@ export const AddModal: FC = () => {
                     onPress={() => setCurrenTimeframe('night')}
                     width="full"
                   >
-                    {i18n.t(langs.evening) + ' / ' + i18n.t(langs.night)}
+                    {i18n.t(langs.night)}
                   </Button>
                 </Column>
               </Column>
