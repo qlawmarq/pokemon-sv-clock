@@ -1,12 +1,15 @@
 {
   "expo": {
-    "name": "pokemon-sv-clock",
+    "name": "Pokémon SV clock",
     "slug": "pokemon-sv-clock",
     "version": "0.0.1",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "pokemon-sv-clock",
+    "owner": "cymagix",
     "userInterfaceStyle": "automatic",
+    "backgroundColor": "#8B021A",
+    "primaryColor": "#6b32b9",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "cover",
