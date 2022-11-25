@@ -27,6 +27,7 @@ import { AddModal } from './AddModal';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../lib/redux/store';
 import { removeClock } from '../../lib/redux/reducers/clockReducer';
+import { BannerAd } from '../../components/BannerAd';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Clock'>;
 
@@ -145,7 +146,7 @@ export const ClockScreen: FC<Props> = () => {
                   }}
                   icon={
                     <CloseIcon
-                      color="white"
+                      // color="white"
                       ml={1}
                       width="full"
                       zIndex="9999"
@@ -166,6 +167,7 @@ export const ClockScreen: FC<Props> = () => {
         </Pressable>
       ) : null}
       <AddModal />
+      {clocks.length !== 0 ? <BannerAd /> : null}
     </Column>
   );
 };

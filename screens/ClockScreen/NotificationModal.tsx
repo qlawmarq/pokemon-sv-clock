@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from 'react';
+import React, { FC, useState } from 'react';
 import { Icon, Text, Button, Modal, Fab, Column } from 'native-base';
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -8,7 +8,9 @@ export const NotificationModal: FC = () => {
     'morning'
   );
 
-  const setNotification = useCallback(() => {}, [timeframe]);
+  // const setNotification = useCallback(() => {
+  //   // TODO: implementation
+  // }, [timeframe]);
 
   return (
     <>

@@ -27,6 +27,9 @@
       "supportsTablet": true,
       "infoPlist": {
         "CFBundleAllowMixedLocalizations": true
+      },
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-3620076875763745~8641609090"
       }
     },
     "android": {
@@ -35,6 +38,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#8B021A"
+      },
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-3620076875763745~2503576158"
       }
     },
     "web": {

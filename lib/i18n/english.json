@@ -1,4 +1,5 @@
 {
-    "CFBundleDisplayName": "Pokémon SV clock"
+    "CFBundleDisplayName": "Pokémon SV clock",
+    "NSUserTrackingUsageDescription": "It will be used for a more personalized app experience."
 }
   

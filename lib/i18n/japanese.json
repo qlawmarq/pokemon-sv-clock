@@ -1,4 +1,5 @@
 {
-    "CFBundleDisplayName": "ポケモンSV ゲーム内時間時計"
+    "CFBundleDisplayName": "ポケモンSV ゲーム内時間時計",
+    "NSUserTrackingUsageDescription": "よりパーソナライズされたアプリ体験のために使用されます。"
 }
   
