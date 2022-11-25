@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addClock } from '../../lib/redux/reducers/clockReducer';
 import { addMinutes } from 'date-fns';
 import { RootState } from '../../lib/redux/store';
+import i18n, { langs } from '../../lib/i18n';
 
 const MAX_PAGE_INDEX = 1;
 
@@ -30,11 +31,12 @@ export const AddModal: FC = () => {
 
   const addNewClock = useCallback(() => {
     let date = new Date();
-    // Adjust to 06:00:00 AM/PM
     if (currentTimeframe === 'night') {
+      // Adjust to 06:00:00 AM
       date = addMinutes(date, 45);
     }
     if (currentTimeframe === 'day') {
+      // Adjust to 06:00:00 PM
       date = addMinutes(date, 9);
     }
     dispatch(addClock(date.toUTCString()));
@@ -92,7 +94,7 @@ export const AddModal: FC = () => {
                 color: 'primary.900',
               }}
             >
-              Add your first clock
+              {i18n.t(langs.createFirstClock)}
             </Text>
           </Pressable>
         </Box>
@@ -117,13 +119,11 @@ export const AddModal: FC = () => {
       >
         <Modal.Content>
           <Modal.CloseButton />
-          <Modal.Header>Create your in-game time clock</Modal.Header>
+          <Modal.Header>{i18n.t(langs.createInGameClock)}</Modal.Header>
           <Modal.Body m="2" justifyContent="center" alignItems="center">
             <Column my="2">
               <Row>
-                <Text mb="2">
-                  Open <Text bold>Map view</Text> and check the time icon.
-                </Text>
+                <Text mb="2">{i18n.t(langs.openMapView)}</Text>
               </Row>
               <Row justifyContent="center" alignItems="center">
                 <Image
@@ -151,7 +151,7 @@ export const AddModal: FC = () => {
             </Column>
             {page === 0 ? (
               <Column my="2">
-                <Text mb="2">Select current in-game time:</Text>
+                <Text mb="2">{i18n.t(langs.selectCurrentInGameTime)}</Text>
                 <Column space={3}>
                   <Button
                     colorScheme="orange"
@@ -159,7 +159,7 @@ export const AddModal: FC = () => {
                     onPress={() => setCurrenTimeframe('day')}
                     width="full"
                   >
-                    Day / Evening
+                    {i18n.t(langs.day)}
                   </Button>
                   <Button
                     colorScheme="violet"
@@ -167,7 +167,7 @@ export const AddModal: FC = () => {
                     onPress={() => setCurrenTimeframe('night')}
                     width="full"
                   >
-                    Night
+                    {i18n.t(langs.evening) + ' / ' + i18n.t(langs.night)}
                   </Button>
                 </Column>
               </Column>
@@ -175,14 +175,15 @@ export const AddModal: FC = () => {
             {page === 1 ? (
               <Column my="2">
                 <Text mb="2" fontWeight="medium">
-                  Press the button when the in-game time has changed to{' '}
+                  {i18n.t(langs.pressSubmitWhenTimeChanged)}{' '}
                   <Text fontWeight="bold">
-                    {currentTimeframe === 'day' ? 'night' : 'morning'}
+                    {currentTimeframe === 'day'
+                      ? i18n.t(langs.night)
+                      : i18n.t(langs.morning)}
                   </Text>
-                  .
                 </Text>
                 <Button colorScheme="primary" onPress={() => addNewClock()}>
-                  Submit
+                  SUBMIT
                 </Button>
               </Column>
             ) : null}
@@ -197,7 +198,7 @@ export const AddModal: FC = () => {
                   setPage(page - 1);
                 }}
               >
-                Back
+                {i18n.t(langs.back)}
               </Button>
             ) : (
               <Button
@@ -208,7 +209,7 @@ export const AddModal: FC = () => {
                   setIsOpen(false);
                 }}
               >
-                Close
+                {i18n.t(langs.close)}
               </Button>
             )}
             {page === MAX_PAGE_INDEX ? null : (
@@ -217,7 +218,7 @@ export const AddModal: FC = () => {
                   setPage(page + 1);
                 }}
               >
-                Next
+                {i18n.t(langs.next)}
               </Button>
             )}
           </Modal.Footer>

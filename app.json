@@ -24,7 +24,10 @@
     "ios": {
       "bundleIdentifier": "com.pokemon-sv-clock",
       "buildNumber": "0.0.1",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true
+      }
     },
     "android": {
       "package": "com.pokemon_sv_clock",
@@ -37,6 +40,10 @@
     "web": {
       "favicon": "./assets/images/favicon.png",
       "name": "Pokémon SV clock"
+    },
+    "locales": {
+      "en": "./lib/i18n/english.json",
+      "ja": "./lib/i18n/japanese.json"
     },
     "plugins": [],
     "extra": {
