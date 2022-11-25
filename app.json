@@ -2,7 +2,7 @@
   "expo": {
     "name": "Pokémon SV clock",
     "slug": "pokemon-sv-clock",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "pokemon-sv-clock",

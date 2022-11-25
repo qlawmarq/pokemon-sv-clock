@@ -1,13 +1,13 @@
 {
   "name": "pokemon-sv-clock",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "node_modules/expo/AppEntry.js",
   "engines": {
     "node": ">=16.14.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cymagix/expo-react-native-base.git"
+    "url": "https://github.com/cymagix/pokemon-sv-clock.git"
   },
   "author": "cymagix",
   "private": true,
