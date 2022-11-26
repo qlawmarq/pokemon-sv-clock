@@ -21,7 +21,7 @@
     "upgrade": "expo upgrade",
     "login": "eas account:login",
     "credentials": "eas credentials",
-    "build:web": "expo build:web",
+    "build:web": "NODE_OPTIONS='--openssl-legacy-provider' expo build:web",
     "build:ios": "eas build --platform ios",
     "build:android": "eas build --platform android",
     "submit:ios": "eas submit --platform ios",
