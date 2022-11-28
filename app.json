@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Pokémon SV clock",
+    "name": "SV clock",
     "slug": "pokemon-sv-clock",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "pokemon-sv-clock",
@@ -23,7 +23,7 @@
     ],
     "ios": {
       "bundleIdentifier": "com.pokemon-sv-clock",
-      "buildNumber": "1.0.2",
+      "buildNumber": "1.0.3",
       "supportsTablet": true,
       "infoPlist": {
         "CFBundleAllowMixedLocalizations": true
@@ -34,7 +34,7 @@
     },
     "android": {
       "package": "com.pokemon_sv_clock",
-      "versionCode": 2,
+      "versionCode": 3,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#320D66"
@@ -45,7 +45,8 @@
     },
     "web": {
       "favicon": "./assets/images/favicon.png",
-      "name": "Pokémon SV clock"
+      "name": "Pokémon SV clock",
+      "shortName": "SV clock"
     },
     "locales": {
       "en": "./lib/i18n/english.json",
