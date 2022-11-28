@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
 export const BannerAd: React.FC = () => {
   useEffect(() => {
-    requestPermissionsAsync();
+    Platform.OS !== 'web' && requestPermissionsAsync();
   }, []);
 
   return (

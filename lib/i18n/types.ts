@@ -1,4 +1,6 @@
 export interface langIf {
+  title: string;
+  description: string;
   createFirstClock: string;
   createInGameClock: string;
   openMapView: string;

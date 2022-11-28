@@ -53,60 +53,52 @@ export const AddModal: FC = () => {
   return (
     <>
       {clocks.length === 0 ? (
-        <>
-          {Platform.OS === 'web' ? (
-            <Box mb="12" textAlign="center">
-              <h1 style={{ marginBottom: '12px' }}>Pokémon SV clock</h1>
-              <p>Pokémon Scarlet/Violet (SV) in-game time clock app</p>
-            </Box>
-          ) : null}
-          <Pressable
-            onPress={() => {
-              setPage(0);
-              setIsOpen(!isOpen);
+        <Pressable
+          onPress={() => {
+            setPage(0);
+            setIsOpen(!isOpen);
+          }}
+        >
+          <Box
+            px="6"
+            py="3"
+            borderRadius="md"
+            shadow="4"
+            _light={{
+              bg: {
+                linearGradient: {
+                  colors: ['primary.900', 'primary.800'],
+                  start: [1, 0],
+                  end: [0, 1],
+                },
+              },
+              color: 'primary.50',
+            }}
+            _dark={{
+              bg: {
+                linearGradient: {
+                  colors: ['primary.200', 'primary.300'],
+                  start: [1, 0],
+                  end: [0, 1],
+                },
+              },
+              color: 'primary.900',
             }}
           >
-            <Box
-              px="6"
-              py="3"
-              borderRadius="md"
-              shadow="4"
+            <Text
+              bold
+              fontSize="lg"
               _light={{
-                bg: {
-                  linearGradient: {
-                    colors: ['primary.900', 'primary.800'],
-                    start: [1, 0],
-                    end: [0, 1],
-                  },
-                },
                 color: 'primary.50',
               }}
               _dark={{
-                bg: {
-                  linearGradient: {
-                    colors: ['primary.200', 'primary.300'],
-                    start: [1, 0],
-                    end: [0, 1],
-                  },
-                },
                 color: 'primary.900',
               }}
             >
-              <Text
-                bold
-                fontSize="lg"
-                _light={{
-                  color: 'primary.50',
-                }}
-                _dark={{
-                  color: 'primary.900',
-                }}
-              >
-                {i18n.t(langs.createFirstClock)}
-              </Text>
-            </Box>
-          </Pressable>
-        </>
+              {i18n.t(langs.createFirstClock)}
+            </Text>
+          </Box>
+        </Pressable>
       ) : null}
       <Fab
         renderInPortal={false}

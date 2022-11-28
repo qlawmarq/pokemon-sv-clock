@@ -1,5 +1,7 @@
 import { langIf } from './types';
 const en: langIf = {
+  title: 'Pokémon SV clock',
+  description: 'Pokémon Scarlet/Violet (SV) in-game time clock app',
   createFirstClock: 'Create your first clock',
   createInGameClock: 'Create in-game clock',
   openMapView: 'Open Map view to check the in-game time.',

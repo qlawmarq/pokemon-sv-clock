@@ -1,5 +1,7 @@
 import { langIf } from './types';
 export const langs: langIf = {
+  title: 'title',
+  description: 'description',
   createFirstClock: 'createFirstClock',
   createInGameClock: 'createInGameClock',
   openMapView: 'openMapView',

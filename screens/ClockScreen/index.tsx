@@ -8,6 +8,7 @@ import {
   IconButton,
   CloseIcon,
   Pressable,
+  Box,
 } from 'native-base';
 
 import {
@@ -30,6 +31,7 @@ import { removeClock } from '../../lib/redux/reducers/clockReducer';
 import { BannerAd } from '../../components/BannerAd';
 import { AgreementModal } from './AgreementModal';
 import { Platform } from 'react-native';
+import i18n, { langs } from '../../lib/i18n';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Clock'>;
 
@@ -117,7 +119,7 @@ export const ClockScreen: FC<Props> = () => {
         color: 'primary.50',
       }}
     >
-      {clocks.length !== 0 ? (
+      {clocks.length > 1 ? (
         <Menu
           closeOnSelect={true}
           trigger={(triggerProps) => {
@@ -170,7 +172,16 @@ export const ClockScreen: FC<Props> = () => {
             {pokeDate ? format(pokeDate, dateFormat) : null}
           </Text>
         </Pressable>
-      ) : null}
+      ) : (
+        <>
+          {Platform.OS === 'web' ? (
+            <Box mb="12" textAlign="center">
+              <h1 style={{ marginBottom: '12px' }}>{i18n.t(langs.title)}</h1>
+              <p>{i18n.t(langs.description)}</p>
+            </Box>
+          ) : null}
+        </>
+      )}
       {isFirstTimeUser && Platform.OS !== 'web' ? (
         <AgreementModal />
       ) : (
