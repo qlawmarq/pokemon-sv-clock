@@ -8,12 +8,12 @@
     "scheme": "pokemon-sv-clock",
     "owner": "cymagix",
     "userInterfaceStyle": "automatic",
-    "backgroundColor": "#8B021A",
-    "primaryColor": "#6b32b9",
+    "backgroundColor": "#320D66",
+    "primaryColor": "#F5002D",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "cover",
-      "backgroundColor": "#8B021A"
+      "backgroundColor": "#320D66"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -37,7 +37,7 @@
       "versionCode": 2,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
-        "backgroundColor": "#8B021A"
+        "backgroundColor": "#320D66"
       },
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-3620076875763745~2503576158"
