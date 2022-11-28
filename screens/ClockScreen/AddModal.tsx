@@ -17,6 +17,7 @@ import { addClock } from '../../lib/redux/reducers/clockReducer';
 import { addMinutes } from 'date-fns';
 import { RootState } from '../../lib/redux/store';
 import i18n, { langs } from '../../lib/i18n';
+import { Platform } from 'react-native';
 
 const MAX_PAGE_INDEX = 1;
 
@@ -52,52 +53,60 @@ export const AddModal: FC = () => {
   return (
     <>
       {clocks.length === 0 ? (
-        <Pressable
-          onPress={() => {
-            setPage(0);
-            setIsOpen(!isOpen);
-          }}
-        >
-          <Box
-            px="6"
-            py="3"
-            borderRadius="md"
-            shadow="4"
-            _light={{
-              bg: {
-                linearGradient: {
-                  colors: ['primary.900', 'primary.800'],
-                  start: [1, 0],
-                  end: [0, 1],
-                },
-              },
-              color: 'primary.50',
-            }}
-            _dark={{
-              bg: {
-                linearGradient: {
-                  colors: ['primary.200', 'primary.300'],
-                  start: [1, 0],
-                  end: [0, 1],
-                },
-              },
-              color: 'primary.900',
+        <>
+          {Platform.OS === 'web' ? (
+            <Box mb="12" textAlign="center">
+              <h1 style={{ marginBottom: '12px' }}>Pokémon SV clock</h1>
+              <p>Pokémon Scarlet/Violet (SV) in-game time clock app</p>
+            </Box>
+          ) : null}
+          <Pressable
+            onPress={() => {
+              setPage(0);
+              setIsOpen(!isOpen);
             }}
           >
-            <Text
-              bold
-              fontSize="lg"
+            <Box
+              px="6"
+              py="3"
+              borderRadius="md"
+              shadow="4"
               _light={{
+                bg: {
+                  linearGradient: {
+                    colors: ['primary.900', 'primary.800'],
+                    start: [1, 0],
+                    end: [0, 1],
+                  },
+                },
                 color: 'primary.50',
               }}
               _dark={{
+                bg: {
+                  linearGradient: {
+                    colors: ['primary.200', 'primary.300'],
+                    start: [1, 0],
+                    end: [0, 1],
+                  },
+                },
                 color: 'primary.900',
               }}
             >
-              {i18n.t(langs.createFirstClock)}
-            </Text>
-          </Box>
-        </Pressable>
+              <Text
+                bold
+                fontSize="lg"
+                _light={{
+                  color: 'primary.50',
+                }}
+                _dark={{
+                  color: 'primary.900',
+                }}
+              >
+                {i18n.t(langs.createFirstClock)}
+              </Text>
+            </Box>
+          </Pressable>
+        </>
       ) : null}
       <Fab
         renderInPortal={false}
@@ -151,8 +160,11 @@ export const AddModal: FC = () => {
             </Column>
             {page === 0 ? (
               <Column my="2">
+                <Text mb="2">
+                  {i18n.t(langs.inGameTimeisDifferentForEachSave)}
+                </Text>
                 <Text mb="2">{i18n.t(langs.selectCurrentInGameTime)}</Text>
-                <Column space={3}>
+                <Column space={3} mt="2">
                   <Button
                     colorScheme="orange"
                     opacity={currentTimeframe === 'day' ? 1 : 0.3}

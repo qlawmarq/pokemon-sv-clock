@@ -2,6 +2,7 @@ export interface langIf {
   createFirstClock: string;
   createInGameClock: string;
   openMapView: string;
+  inGameTimeisDifferentForEachSave: string;
   selectCurrentInGameTime: string;
   pressSubmitWhenTimeChanged: string;
   morning: string;

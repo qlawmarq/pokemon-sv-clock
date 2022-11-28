@@ -3,6 +3,7 @@ export const langs: langIf = {
   createFirstClock: 'createFirstClock',
   createInGameClock: 'createInGameClock',
   openMapView: 'openMapView',
+  inGameTimeisDifferentForEachSave: 'inGameTimeisDifferentForEachSave',
   selectCurrentInGameTime: 'selectCurrentInGameTime',
   pressSubmitWhenTimeChanged: 'pressSubmitWhenTimeChanged',
   morning: 'morning',

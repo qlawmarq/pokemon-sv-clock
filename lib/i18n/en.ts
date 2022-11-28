@@ -3,6 +3,8 @@ const en: langIf = {
   createFirstClock: 'Create your first clock',
   createInGameClock: 'Create in-game clock',
   openMapView: 'Open Map view to check the in-game time.',
+  inGameTimeisDifferentForEachSave:
+    'In-game time is different for each saved data.',
   selectCurrentInGameTime: 'Select current in-game time.',
   pressSubmitWhenTimeChanged: 'Press submit when in-game time change to',
   morning: 'Morning',
