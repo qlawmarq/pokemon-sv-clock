@@ -1,5 +1,14 @@
 # Pokémon Scarlet/Violet (SV) in-game time clock app
 
+**Just a clock app for Pokémon Scarlet/Violet (SV) user.**
+
+In-game time for Pokémon Scarlett/Violet repeats every 72 minutes: day, dusk, night.  
+That In-game time clock will start running once player have completed the tutorial.
+
+This in-game time cannot be accurately known even in-game, but this app can help you to know approximate in-game time.
+
+https://pokemon-sv-clock.cymagix.net/
+
 ## Development
 
 At first, need to install Node.js >= 16.
