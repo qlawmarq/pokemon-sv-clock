@@ -7,7 +7,12 @@ That In-game time clock will start running once player have completed the tutori
 
 This in-game time cannot be accurately known even in-game, but this app can help you to know approximate in-game time.
 
-https://pokemon-sv-clock.vercel.app/
+You can access web version here: https://pokemon-sv-clock.vercel.app/
+
+If you wish to access the iOS/Android version, sorry, access is currently closed.
+
+But if you really want access the iOS/Android version, let me know your email and I'll send you an invitation.
+
 
 ## Development
 
