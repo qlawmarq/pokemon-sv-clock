@@ -2,6 +2,8 @@
 
 **Just a clock app for Pokémon Scarlet/Violet (SV) user.**
 
+**It is also an experimental project where the code for all three platforms (Web, Android, and iOS) is composed entirely in React Native.**
+
 In-game time for Pokémon Scarlett/Violet repeats every 72 minutes: day, dusk, night.  
 That In-game time clock will start running once player have completed the tutorial.
 
