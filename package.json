@@ -7,9 +7,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cymagix/pokemon-sv-clock.git"
+    "url": "https://github.com/qlawmarq/pokemon-sv-clock.git"
   },
-  "author": "cymagix",
+  "author": "qlawmarq",
   "private": true,
   "scripts": {
     "dev": "npm run start",
